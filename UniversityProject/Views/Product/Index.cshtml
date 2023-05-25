@@ -1,0 +1,266 @@
+﻿@using UniversityProject.ViewModels.Product
+@model ProductIndexViewModel
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="~/uni layihe/css/style.css" />
+    <script src="~/uni layihe/js/script.js"></script>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://kit.fontawesome.com/f2324461fb.js"
+            crossorigin="anonymous"></script>
+    <title></title>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function () {
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor(
+                (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            );
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Display the result in the element with id="demo"
+            document.getElementById("gun").innerHTML = days;
+            document.getElementById("saat").innerHTML = hours;
+            document.getElementById("deqiqe").innerHTML = minutes;
+            document.getElementById("saniye").innerHTML = seconds;
+
+            // If the count down is finished, write some text
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("saniye").innerHTML = "EXPIRED";
+            }
+        }, 1000);
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div id="banner">
+                <div class="logo">
+                    <img class="a1" src="~/uni layihe/img/logo.jpg" alt="" />
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Axtar..." />
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="button">
+                    <div class="icon">
+                        <i class="fa-solid fa-user"></i>
+                        <span>Daxil Ol</span>
+                    </div>
+                    <div class="icon">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span>Səbət</span>
+                    </div>
+                </div>
+            </div>
+            <nav>
+                <div>MENU</div>
+                <ul>
+                    <li><a asp-action="index" asp-controller="home">Home</a></li>
+                    <li><a asp-action="index" asp-controller="shop">Shop</a></li>
+                    <li><a asp-action="index" asp-controller="product">Product</a></li>
+                    <li><a asp-action="index" asp-controller="blog">Blog</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="product">
+            <img src="~/uni layihe/img/book1.jpg" alt="" />
+            <div class="inf">
+                <h1>Sun Farm Fields</h1>
+                <hr />
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+                    ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.
+                </p>
+                <br />
+
+                <div class="countdown">
+                    <p id="gun"></p>
+                    <p id="saat"></p>
+                    <p id="deqiqe"></p>
+                    <p id="saniye"></p>
+                </div>
+                <br />
+                <br />
+                <button type="button" name="button">kitabi elde et</button>
+
+                <ul class="b23">
+                    <li>SKU:<span>D2300-3-2-4</span></li>
+                    <li>Categories:<span>Children's Books, Horror, Miracle</span></li>
+                    <li>Tags:<span>Hot, Trend</span></li>
+                    <li>Author: <span>Davids Thomson</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <hr />
+        <div class="infor">
+            <ul class="tab">
+                <li><a href="#">Description</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+                minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                aliquip ex ea commodo consequat. Duis aute irure dolor in
+                reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                culpa qui officia deserunt mollit anim id est laborum. Sed ut
+                perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo
+                inventore veritatis et quasi architecto beatae vitae dicta sunt
+                explicabo.<br /><br />
+
+                Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
+                fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
+                sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor
+                sit amet, consectetur, adipisci velit, sed quia non numquam eius modi
+                tempora incidunt ut labore et dolore magnam aliquam quaerat
+                voluptatem.
+            </p>
+        </div>
+
+        <hr />
+        <div class="">
+            <p class="basliq">Related Products</p>
+        </div>
+
+        <div class="gallery-wrap">
+            <img src="~/uni layihe/img/back.png" id="backBtn" />
+               
+            <div class="gallery">
+                
+                    @foreach(var relatedProducts in Model.RelatedProducts)
+                    {
+                <div>
+                   <span>
+
+                        <img src="@relatedProducts.FilePath" alt="" />
+                        <h3>@relatedProducts.Title</h3>
+                        <p>@relatedProducts.Writer</p>
+                   </span>
+                </div>
+                    }
+              
+
+            </div>
+
+            <img src="~/uni layihe/img/next.png" id="nextBtn" />
+        </div>
+
+        <script>
+            let scrollContainer = document.querySelector(".gallery");
+            let backBtn = document.getElementById("backBtn");
+            let nextBtn = document.getElementById("nextBtn");
+
+            scrollContainer.addEventListener("wheel", (evt) => {
+                evt.preventDefault();
+                scrollContainer.scrollLeft += evt.deltaY;
+                scrollContainer.style.scrollBehavior = "auto";
+            });
+
+            nextBtn.addEventListener("click", () => {
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft += 900;
+            });
+
+            backBtn.addEventListener("click", () => {
+                scrollContainer.style.scrollBehavior = "smooth";
+                scrollContainer.scrollLeft -= 900;
+            });
+        </script>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="col">
+                <h1>Contact us</h1>
+                <ul>
+                    <li><a href="#">199 Amsterdam 72, Wall street, Nox 20110 NY</a></li>
+                    <li><a href="#">(+123) 456 789</a></li>
+                    <li><a href="#">tikieshopbook@domain.com</a></li>
+                    <li>
+                        <a href="#">Branch: New York, Paris, France, California, Madrid, Spain</a>
+                    </li>
+                    <li><a href="#">Open hours: 8.00 – 20.00 Mon – Fri</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Print restoration</h1>
+                <ul>
+                    <li><a href="#">Bestsellers</a></li>
+                    <li><a href="#">Interviews</a></li>
+                    <li><a href="#">Authors Story</a></li>
+                    <li><a href="#">Book Fairs</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Social media</h1>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Dribble</a></li>
+                    <li><a href="#">Behance</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>About us</h1>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Institute</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="copyright">&copy; TIKIE</div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 5,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+</html>

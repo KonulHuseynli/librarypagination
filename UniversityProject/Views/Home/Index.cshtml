@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Responsive Image Slider | With Manual Buttons and Autoplay Navigation
+        Visibility
+    </title>
+    <link rel="stylesheet" href="~/home/style.css" />
+    <script src="https://kit.fontawesome.com/f2324461fb.js"
+            crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <img src="~/admin/images/download (1).png" alt="" />
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a asp-action="index" asp-controller="home">Home</a></li>
+                    <li><a asp-action="index" asp-controller="shop">Shop</a></li>
+                    <li><a asp-action="index" asp-controller="product">Product</a></li>
+                    <li><a asp-action="index" asp-controller="blog">Blog</a></li>
+                </ul>
+                <div class="icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<header>
+    <div class="img-slider">
+        <div class="slide active">
+            <img src="~/home/assets/pexels-artem-malushenko-2249063.jpg" alt="" />
+            <div class="info">
+                <h2>Outstanding bookstore</h2>
+                <p>Relax with books online</p>
+                <button>Read more</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/home/assets/pexels-suzy-hazelwood-1122865.jpg" alt="" />
+            <div class="info">
+                <h2>Most popular</h2>
+                <p>Books help you learn about the world</p>
+                <button>Read more</button>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="~/home/assets/pexels-min-an-694740.jpg" alt="" />
+            <div class="info">
+                <h2>Books store</h2>
+                <p>Best book store online</p>
+                <button>Read more</button>
+            </div>
+        </div>
+        <div class="navigation">
+            <div class="btn active"></div>
+            <div class="btn"></div>
+            <div class="btn"></div>
+        </div>
+    </div>
+</header>
+<div class="books">
+    <h2>Our books</h2>
+    <button class="bttn1"><</button>
+    <button class="bttn2">></button>
+    <div class="featured">
+        <div class="dark line">
+            <div class="hot"><img src=~/home/Images/Dark Knight.webp" alt="" /></div>
+            <h3><a href="">Dark Knight</a></h3>
+            <button class="add">Əlavə Edin</button>
+        </div>
+        <div class="dark line">
+            <div class="hot">
+                <img src="~/home/Images/Sweet Valley High.webp" alt="" />
+            </div>
+            <h3><a href="">Sweet Valley High</a></h3>
+            <button class="add">Əlavə Edin</button>
+        </div>
+        <div class="dark">
+            <div class="hot">
+                <img src="~/home/Images/The Da Vinci Code.webp" alt="" />
+            </div>
+            <h3><a href="">The Da Vinci Code</a></h3>
+            <button class="add">Əlavə Edin</button>
+        </div>
+    </div>
+</div>
+<section class="map-section">
+    <div class="map-div">
+        <div class="imgdiv">
+            <div>
+                <img src="~/home/bigview.webp" alt="" />
+            </div>
+        </div>
+        <div class="iframediv">
+            <div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6078.735247553863!2d49.84856646233571!3d40.37854420446829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307da7c3a641cf%3A0x53a5c1e7cc11c36f!2zQXrJmXJiYXljYW4gRMO2dmzJmXQgTmVmdCB2yZkgU8mZbmF5ZSBVbml2ZXJzaXRldGk!5e0!3m2!1saz!2saz!4v1683307232706!5m2!1saz!2saz"
+                        style="border: 0"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="map-text-div">
+        <ul>
+            <li>
+                <div><h3>FREE GIFT WRAP</h3></div>
+                <div>
+                    <img src="https://wpbingosite.com/wordpress/tikie/wp-content/uploads/2021/04/star-03.png"
+                         alt="" />
+                    <p>
+                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                        sem. Nulla consequat massa quis enim.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div><h3>FREE DELIVERY WORLDWIDE</h3></div>
+                <div>
+                    <img src="https://wpbingosite.com/wordpress/tikie/wp-content/uploads/2021/04/unique-03.png"
+                         alt="" />
+                    <p>
+                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                        sem. Nulla consequat massa quis enim.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div><h3>ONLINE ORDERING</h3></div>
+                <div>
+                    <img src="https://wpbingosite.com/wordpress/tikie/wp-content/uploads/2021/04/quality-03.png"
+                         alt="" />
+                    <p>
+                        Donec quam felis, ultricies nec, pellentesque eu, pretium quis,
+                        sem. Nulla consequat massa quis enim.
+                    </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+<main>
+    <section id="about-us">
+        <div class="container">
+            <h1>Haqqımızda</h1>
+            <div class="cards">
+                <div class="card">
+                    <div class="img-container">
+                        <img src="~/home/assets/adnsu-3055160137.jpg" alt="" />
+                    </div>
+                    <a href="#">Universitetimiz</a>
+                </div>
+                <div class="card">
+                    <div class="img-container">
+                        <img src="~/home/assets/learn-4226965_1280-1080x675-3360902462.jpg"
+                             alt="" />
+                    </div>
+                    <a href="#">E-kitabxana</a>
+                </div>
+                <div class="card">
+                    <div class="img-container">
+                        <img src="~/home/assets/0 jYTPhSdLKCzrRSxb-2864615070.jpg" alt="" />
+                    </div>
+                    <a href="#">İstifadəçilər</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="sign-up">
+        <div class="container">
+            <div class="row">
+                <div class="img-container">
+                    <img src="~/home/assets/pexels-photo-3616498.jpeg" alt="" />
+                </div>
+                <div class="text">
+                    <i class="fa-solid fa-book-open-reader"></i>
+                    <h1>Join us!</h1>
+                    <p>
+                        Signup for our Newsletter & get updates & offers in your inbox.
+                    </p>
+                    <button>Sign up</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+    <footer>
+        <div class="container">
+            <div class="col">
+                <h1>Contact us</h1>
+                <ul>
+                    <li><a href="#">199 Amsterdam 72, Wall street, Nox 20110 NY</a></li>
+                    <li><a href="#">(+123) 456 789</a></li>
+                    <li><a href="#">tikieshopbook@domain.com</a></li>
+                    <li>
+                        <a href="#">Branch: New York, Paris, France, California, Madrid, Spain</a>
+                    </li>
+                    <li><a href="#">Open hours: 8.00 – 20.00 Mon – Fri</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Print restoration</h1>
+                <ul>
+                    <li><a href="#">Bestsellers</a></li>
+                    <li><a href="#">Interviews</a></li>
+                    <li><a href="#">Authors Story</a></li>
+                    <li><a href="#">Book Fairs</a></li>
+                    <li><a href="#">Privacy & Terms</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>Social media</h1>
+                <ul>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Dribble</a></li>
+                    <li><a href="#">Behance</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h1>About us</h1>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="#">Institute</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Gift cards</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">&copy; TIKIE</div>
+    </footer>
+
+    <script type="text/javascript">
+        var slides = document.querySelectorAll(".slide");
+        var btns = document.querySelectorAll(".btn");
+        let currentSlide = 1;
+
+        // Javascript for image slider manual navigation
+        var manualNav = function (manual) {
+            slides.forEach((slide) => {
+                slide.classList.remove("active");
+
+                btns.forEach((btn) => {
+                    btn.classList.remove("active");
+                });
+            });
+
+            slides[manual].classList.add("active");
+            btns[manual].classList.add("active");
+        };
+
+        btns.forEach((btn, i) => {
+            btn.addEventListener("click", () => {
+                manualNav(i);
+                currentSlide = i;
+            });
+        });
+
+        // Javascript for image slider autoplay navigation
+        var repeat = function (activeClass) {
+            let active = document.getElementsByClassName("active");
+            let i = 1;
+
+            var repeater = () => {
+                setTimeout(function () {
+                    [...active].forEach((activeSlide) => {
+                        activeSlide.classList.remove("active");
+                    });
+
+                    slides[i].classList.add("active");
+                    btns[i].classList.add("active");
+                    i++;
+
+                    if (slides.length == i) {
+                        i = 0;
+                    }
+                    if (i >= slides.length) {
+                        return;
+                    }
+                    repeater();
+                }, 10000);
+            };
+            repeater();
+        };
+        repeat();
+    </script>
+</body>
+</html>

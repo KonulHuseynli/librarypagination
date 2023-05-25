@@ -1,0 +1,49 @@
+﻿@using UniversityProject.Areas.Admin.ViewModels
+@model RelatedProductIndexViewModel
+<div class="main-panel">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-lg-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">Products</h4>
+                        <a class="btn btn-success" asp-action="create" asp-controller="relatedproduct" asp-area="admin">CREATE Product</a>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Id</th>
+                                        <th>Title</th>
+                                        <th>Writer</th>
+                                        <th>FilePath</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var category in Model.RelatedProducts)
+                                    {
+                                        <tr>
+                                            <td>@category.Id</td>
+                                            <td>@category.Title</td>
+                                            <td>@category.Writer</td>
+
+                                            <td>@category.FilePath</td>
+                                            <td >
+
+                                                <a class="btn btn-primary " asp-action="update" asp-controller="relatedproduct" asp-area="admin" asp-route-id=@category.Id>Update</a>
+                                                <a class="btn btn-primary btn-danger " asp-action="delete" asp-controller="relatedproduct" asp-area="admin" asp-route-id=@category.Id>Delete</a>
+                                                <a class="btn btn-warning btn-details " asp-action="details" asp-controller="relatedproduct" asp-area="admin" asp-route-id=@category.Id>Details</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

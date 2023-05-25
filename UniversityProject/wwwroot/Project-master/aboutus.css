@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root{
+    --main-color:#333;
+    --secondary-color:#ececec;
+    --hover-color:#9387d9;
+    --default-font-family:'Jost', sans-serif;
+}
+html{
+    font-family: var(--default-font-family);
+}
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+.container{
+    padding:3rem 5%;
+    margin:0 auto;
+}
+/*header*/
+header .container #banner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container #banner .logo{
+    width:158px;
+}
+header .container #banner .search{
+   background-color: var(--secondary-color);
+   padding:0.5rem 2rem;
+   border-radius: 5rem;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap:1rem;
+   width:35%;
+}
+header .container #banner .search input{
+    background-color: transparent;
+    border: none;
+    font-family: var(--default-font-family);
+}
+header .container #banner .search input:focus-visible{
+    outline: none;
+}
+header .container #banner .search i{
+    color:var(--main-color);
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+header .container #banner .search i::after{
+    content:"";
+    position: absolute;
+    background-color: var(--main-color);
+    width:1px;
+    height:100%;
+    left:-80%;
+}
+header .container #banner .search i:hover{
+    color:var(--hover-color);
+}
+header .container #banner .button{
+    display: flex;
+    gap:2rem;
+}
+header .container #banner .button .icon{
+    display: flex;
+    align-items: center;
+    gap:0.8rem;
+    color:var(--main-color);
+    cursor: pointer;
+}
+header .container #banner .button .icon span{
+    font-size:0.9rem;
+    font-weight: 600;
+}
+header .container #banner .button .icon i{
+    border:2px solid var(--secondary-color);
+    padding:0.7rem;
+    border-radius: 50%;
+    transition: .3s ease-in-out;
+}
+header .container #banner .button .icon:hover.icon i{
+    border-color:var(--hover-color);
+    background-color: var(--hover-color);
+    color:white;
+}
+nav{
+    margin-top: 2rem;
+    border-top:1px solid var(--secondary-color);
+    border-bottom:1px solid var(--secondary-color);
+    position: relative;
+    text-transform: uppercase;
+}
+nav div{
+    color:var(--secondary-color);
+    font-weight: 700;
+    font-size:3rem;
+    position: absolute;
+    height:55px;
+    top:-0.3rem;
+    left:3rem;
+    letter-spacing: 2.5rem;
+    opacity: 0.3;
+    z-index: -1;
+}
+nav ul{
+    display: flex;
+    gap:2rem;
+    list-style: none;
+}
+nav ul li a{
+    text-decoration: none;
+    font-size:0.9rem;
+    font-weight: 600;
+    color:var(--main-color);
+    letter-spacing: 0.1rem;
+    transition: .3s ease-in-out;
+    position: relative;
+}
+nav ul li a::before,
+nav ul li a::after
+{
+    position: absolute;
+    content:"";
+    background-color: var(--hover-color);
+    width:0;
+    height: 2px;
+    bottom:-3px;
+    transition: .3s ease-in-out;
+}
+nav ul li a::before{
+    right:50%;
+}
+nav ul li a::after{
+    left:50%;
+}
+nav ul li a:hover::before,
+nav ul li a:hover::after{
+    width:50%;
+}
+.about{
+    width: 100%;
+}
+.about h2{
+    color: #D2D2D2;
+    font-family: "Times New Roman", Sans-serif;
+    font-size: 150px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-top: 20px;
+}
+.about .inform{
+    display: flex;
+}
+.log img{
+    width: 920px;
+    height: 500px;
+}
+.inform .paragrf{
+    width: 500px;
+    margin-left: 100px;
+    margin-top: 60px;
+    font-size: 21px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.inform a{
+    text-decoration: none;
+    color: black;
+}
+.library{
+    padding-top: 40px;
+    text-align: center;
+    font-size: 30px;
+    background-color: #E1DFD430;
+}
+.labout{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 16px;
+    background-color: #E1DFD430;
+}
+.about2{
+    padding: 20px;
+    top: 0;
+    display: none;
+}
+.about2 h1{
+    margin-left: 400px;
+    display: inline-block;
+}
+.about2 .iks{
+    margin-left: 300px;
+    font-size: 30px;
+}
+.subs{
+    width: 100%;
+    height: 300px;
+    background-color: #EAE9E4;
+    display: flex;
+}
+.word{
+    width: 45%;
+    height: 300px;
+}
+.word p{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 64px;
+    line-height: 70px;
+    padding-top: 70px;
+    padding-left: 100px;
+    color: #333;
+}
+.formail .email{
+    border: 0;
+    width: 650px;
+    height: 50px;
+    font-style: italic;
+    font-size: 16px;
+    padding: 0 50px;
+    background: transparent;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    margin-top: 120px;
+    display: inline-block;
+    position: absolute;
+}
+.formail .submit{
+    border: 0;
+    background: transparent;
+    padding: 0 50px;
+    margin-top: 120px;
+    margin-left: 520px;
+    cursor: pointer;
+    height: 50px;
+}
+.fa-envelope{
+    position: absolute;
+    margin-top: 137px;
+    margin-left: 20px;
+}
+footer .container{
+    display: flex;
+    align-items: center;
+    gap:12rem;
+}
+footer .container .col{
+    display: flex;
+    flex-direction: column;
+}
+footer .container .col h1{
+    font-size:0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color:var(--main-color);
+}
+footer .container .col ul{
+    list-style: none;
+    padding: 0;;
+}
+footer .container .col ul li a{
+    text-decoration: none;
+    color:gray;
+    font-size:0.8rem;
+    transition: .3s ease-in-out;
+}
+footer .container .col ul li a:hover{
+    color:var(--hover-color);
+}
+footer .copyright{
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    text-align: center;
+    width: 100%;
+    padding:1rem;
+}
